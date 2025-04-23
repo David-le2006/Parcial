@@ -2,7 +2,7 @@ cantidad_pedidos = int(input("¿Cuántos pedidos vas a ingresar?: "))
 pedidos = []
 
 for i in range(cantidad_pedidos):
-    print(f"\nPedido {i+1}:")
+    print(f"Pedido {i+1}:")
     nombre = input("Nombre del cliente: ")
     valor = float(input("Valor total del pedido: "))
     estado = input("Estado del pedido (pendiente, enviado, cancelado): ").strip().lower()
@@ -16,7 +16,7 @@ monto_total_enviado = sum(p["valor"] for p in enviados)
 valor_maximo = max(p["valor"] for p in pedidos)
 clientes_maximo_valor = [p["nombre"] for p in pedidos if p["valor"] == valor_maximo]
 
-print("\n--- Resumen ---")
+print("Resumen:")
 print(f"Total de pedidos procesados: {total_pedidos}")
 print(f"Total de pedidos enviados: {len(enviados)}")
 print(f"Monto total en ventas (enviados): ${monto_total_enviado:.2f}")
